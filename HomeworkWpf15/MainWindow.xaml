@@ -1,0 +1,175 @@
+﻿<Window x:Class="HomeworkWpf15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeworkWpf15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Window.Resources>
+        <Style x:Name="ButtonStyle"
+               TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" >
+            <Image Source="Data/Logo.jpg" Width="150" Stretch="UniformToFill"/>
+            <Button>
+                <TextBlock Text="Growing" Margin="10" VerticalAlignment="Center"/>
+            </Button>
+            <Button>
+                <TextBlock Text="Styling" Margin="10" VerticalAlignment="Center"/>
+            </Button>
+            <Button>
+                <TextBlock Text="Tree Care" Margin="10" VerticalAlignment="Center"/>
+            </Button>
+
+        </StackPanel>
+        <FlowDocumentScrollViewer Background="#f5f5f5" Grid.Row="1" Padding="0" Margin="0">
+            <FlowDocument>
+
+                <Paragraph>
+                    <Floater>
+                        <BlockUIContainer>
+                            <Image HorizontalAlignment="Left" Source="Data\home.jpg" Stretch="UniformToFill"/>
+                        </BlockUIContainer>
+                    </Floater>
+                </Paragraph>
+
+                <Paragraph>
+                    <TextBlock FontFamily="Lato" FontSize="44" FontWeight="UltraBlack">
+                                The living art of Bonsai
+                    </TextBlock>
+                </Paragraph>
+
+                <Paragraph>
+                    Bonsai Empire is a community built by enthusiasts and experts from around the world. We introduce you to the fascinating and living art of Bonsai, and help you get started!
+                </Paragraph>
+
+                <Paragraph FontSize="25" Margin="20">
+                    Bonsai tree species
+                </Paragraph>
+                
+                <List>
+                    <ListItem>
+                        <Paragraph>
+                            Ficus
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Juniper
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Carmona
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Chinese Elm
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Japanese Maple
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Jade tree
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Pine
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Azalea
+                        </Paragraph>
+                    </ListItem>
+                </List>
+
+                <Table>
+                    <Table.Columns>
+                        <TableColumn Width="200"/>
+                        <TableColumn/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    <Image Source="Data/Grow.jpg" Width="200"/>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Margin="10">
+                                    <Run Text="Growing and cultivating" FontSize="25" FontWeight="Bold"/>
+                                </Paragraph>
+                                <Paragraph>
+                                    There are different methods to propagate trees, some need a lot of patience and some offer immediate results. Growing a tree from seed means you have full control over the styling of your Bonsai plant, but it takes at least five years before you have anything that resembles a tree. Buying a tree in a nursery means you can style it right away.
+                                </Paragraph>
+                                <Paragraph>
+                                    <Button Margin="20">
+                                        TREE CULTIVATION
+                                    </Button>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    <Image Source="Data/Styling.jpg" Width="200"/>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Margin="10">
+                                    <Run Text="Styling" FontSize="25" FontWeight="Bold"/>
+                                </Paragraph>
+                                <Paragraph>
+                                    A common misconception is that the plants used for Bonsai are genetically 'dwarfed' plants. Bonsai trees are normal plants, propagated like any other, but trained using sophisticated techniques to keep them miniature. The styling of these miniature trees involves important techniques like regular pruning and wiring.</Paragraph>
+                                <Paragraph>
+                                    <Button Margin="20">
+                                        BONSAI STYLING
+                                    </Button>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    <Image Source="Data/Care.jpg" Width="200"/>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Margin="10">
+                                    <Run Text="Bonsai tree care" FontSize="25" FontWeight="Bold"/>
+                                </Paragraph>
+                                <Paragraph>
+                                    Keeping a Bonsai tree alive is not a difficult task, but there are a few things you should be aware of. Bonsai trees are planted in small pots with minimal space for water and nutrient reserves. That means you need to water and fertilize your tree regularly. Make sure your Bonsai gets plenty of light, water, and fertilize when needed and your tree is sure to thrive!</Paragraph>
+                                <Paragraph>
+                                    <Button Margin="20">
+                                        BONSAI CARE
+                                    </Button>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+
+                    </TableRowGroup>
+                </Table>
+                
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Window>
